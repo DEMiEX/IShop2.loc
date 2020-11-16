@@ -1,0 +1,6 @@
+#Установка кодировки по умолчанию
+AddDefaultCharset utf-8
+#Переадрисация вкл
+RewriteEngine On
+#Переадресация в папку public значения $1
+RewriteRule (.*) public/$1

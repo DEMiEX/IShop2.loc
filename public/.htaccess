@@ -1,0 +1,6 @@
+#Условия переадресации не файла и не дериктории
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#Правило переадрессации все на index.php со значением $1
+#где L - последнее значение, QSA -дописывание к концу строки get параметра
+RewriteRule (.*) index.php?$1 [L,QSA]
